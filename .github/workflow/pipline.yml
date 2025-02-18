@@ -1,8 +1,0 @@
-name: Check Docker Version
-on: push
-jobs:
-  check-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show Docker Version
-        run: docker --version
