@@ -1,12 +1,13 @@
-FROM node:16
-workdir /app
+FROM node:18
 
-copy package.json ./
+WORKDIR /app
 
-run npm install
+COPY package.json ./
 
-copy .. 
+RUN npm install
 
-expose 3000
+COPY . .
+
+EXPOSE 3000
 
 CMD ["npm", "start"]
